@@ -16,18 +16,25 @@
     flex: 1;
     text-align: right;
     }
+   
     nav ul {
     display: inline-block;
     list-style-type: none; 
+    padding: 0;
+    margin: 0;
     }
     nav ul li {
     display: inline-block;
     margin-right: 20px;
+
     }
     a {
     text-decoration: none;
     color: #555
     }
+    nav ul li a:hover {
+        color: blue; 
+      }
     p {
     color: #555;
     }
@@ -112,7 +119,7 @@
     content: ' ';
     background: #ff523b;
     width: 80px;
-    height: 50px;
+    height: 5px;
     border-radius: 5px;
     position: absolute;
     bottom: 0;
@@ -121,7 +128,7 @@
     }
     h4 {
     color: #555;
-    font-weight: normal;
+    font-weight: bold;
     }
     .col-4 p {
     font-size: 14px;
@@ -132,3 +139,4 @@
     .col-4:hover {
     transform: translateY(-5px);
     }
+    
