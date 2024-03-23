@@ -30,10 +30,10 @@
     }
     a {
     text-decoration: none;
-    color: #555
+    color: black;
     }
     nav ul li a:hover {
-        color: blue; 
+        color:#ff523b; 
       }
     p {
     color: #555;
@@ -115,7 +115,7 @@
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
-    color: #555;
+    color: black;
     }
     .title::after {
     content: ' ';
@@ -129,7 +129,7 @@
     transform: translateX(-50%);
     }
     h4 {
-    color: #555;
+    color: black;
     font-weight: bold;
     }
     .col-4 p {
