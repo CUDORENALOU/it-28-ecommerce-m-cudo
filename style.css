@@ -81,6 +81,8 @@
     .header .row {
     margin-top: 70px;
     }
+   
+
     .categories {
     margin: 70px;
     }
@@ -139,17 +141,110 @@
     .col-4:hover {
     transform: translateY(-5px);
     }
+    
+  /* add to cart*/
+
     .add-to-cart-btn {
-        background-color: #4CAF50;
-        display: inline-block;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s;
+    background-color: #4CAF50;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
     }
     
     .add-to-cart-btn:hover {
         background-color: #154918;
     }
+
+    /* logistics */
+.logistics {
+    background-color:#fff;
+    padding: 50px 0;
+}
+
+.logistics .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logistics h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.logistics .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logistics .col-3 {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.logistics i {
+    font-size: 3rem;
+    color: #f3614e;
+    margin-bottom: 20px;
+}
+
+.logistics h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.logistics p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* customer services  */
+.customer-services {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.customer-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.customer-services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.customer-services .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-services .col-3 {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.customer-services i {
+    font-size: 3rem;
+    color:#f3614e ;
+    margin-bottom: 20px;
+}
+
+.customer-services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.customer-services p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
