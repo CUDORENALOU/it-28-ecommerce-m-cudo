@@ -5,6 +5,10 @@
     }
     body {
     font-family: 'Poppins', san-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: radial-gradient(#fff, #ffd6d6);
     }
     .navbar {
     display: flex;
@@ -162,7 +166,7 @@
     
 /* customer services  */
 .customer-services {
-    background-color: #fff;
+    background-color: #fff, #ffd6d6;
     padding: 50px 0;
 }
 
@@ -206,7 +210,7 @@
 }
 /* Contact Section Styles */
 .contact-section {
-    background-color: #f9f9f9;
+    background-color: #fff, #ffd6d6;
     padding: 80px 0;
 }
 
@@ -251,7 +255,7 @@
 }
 /* CSS for the About Us section */
 .about-us {
-    background-color: #f9f9f9;
+    background-color: #fff, #ffd6d6;
     padding: 50px 0;
 }
 
@@ -272,32 +276,20 @@
     margin-bottom: 20px;
 }
 
-/* Style for the contact form */
-.contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+/* Style for payment options */
+#payment-options {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .payment-option {
+    margin-right: 10px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #45a049;
-}
+    transition: all 0.3s ease;
+  }
+  
+  .payment-option:hover {
+    background-color: #f0f0f0;
+  }
