@@ -8,12 +8,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link rel="stylesheet" href="use.fontawesome.com/releases/v5.15.4/css/all.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-
+<style>
+  /* Style for payment options */
+  #payment-options {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .payment-option {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .payment-option:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+</head>
+<body>
 
 <div class="container">
 <div class="navbar">
 <div class="logo">
-<img src="img/HADG.png" width="125 px">
+<img src="img/HADG.png" width="125" alt="Logo">
 </div>
 <nav>
 <ul>
@@ -21,143 +41,186 @@
 <li><a href="products.html"> Products </a></li>
 <li><a href="about.html"> About Us</a></li>
 <li><a href="contacts.html"> Contacts</a></li>
-
+</ul>
+</nav>
+<div id="cart-summary">
+  <p>Total: $<span id="total">0.00</span></p>
+  <button id="buy-btn" onclick="buy()">Buy</button>
+  <div id="payment-options" style="display: none;">
+    <h3>Select Payment Method:</h3>
+    <button onclick="pay('COD')">Cash on Delivery</button>
+    <button onclick="pay('GCASH')">GCash</button>
+    <button onclick="pay('PAYPAL')">PayPal</button>
+  </div>
 </div>
 </div>
+</div>
 
-    <!-----Features Products--------->
-    
-    <div class="small-container">
-    <h2 class="title"> Featured Products</h2>
-    <div class="row">
-    <div class="col-4">
-    <img src="img/431100965_353534543671922_5469763584189103011_n.jpg">
-    
+<!-- Features Products -->
+<div class="small-container">
+<h2 class="title">Featured Products</h2>
+<div class="row" id="featured-products">
+  <!-- Product 1 -->
+  <div class="col-4">
+    <img src="img/431100965_353534543671922_5469763584189103011_n.jpg" alt="Floral Tops">
     <h4>Floral Tops</h4>
     <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-o"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
     </div>
-    <p>70.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/431170111_1052111425858054_3175910229515670603_n.jpg">
+    <p>$70.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Floral Tops', 70.00)">Add to Cart</button>
+  </div>
+  <!-- Product 2 -->
+  <div class="col-4">
+    <img src="img/431170111_1052111425858054_3175910229515670603_n.jpg" alt="Mini Heart Tops">
     <h4>Mini Heart Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-half-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
     </div>
-    <p>65.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/431342707_875083427387805_5429361695973722078_n.jpg">
+    <p>$65.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Mini Heart Tops', 65.00)">Add to Cart</button>
+  </div>
+  <!-- Product 3 -->
+  <div class="col-4">
+    <img src="img/431342707_875083427387805_5429361695973722078_n.jpg" alt="Such cute Tops">
     <h4>Such cute Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-half-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
     </div>
-    <p>85.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/431354579_931663951606076_4235310942906013365_n.jpg">
+    <p>$85.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Such cute Tops', 85.00)">Add to Cart</button>
+  </div>
+  <!-- Product 4 -->
+  <div class="col-4">
+    <img src="img/431354579_931663951606076_4235310942906013365_n.jpg" alt="Blue flower Tops">
     <h4>Blue flower Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-half-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
     </div>
-    <p>80.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    </div>
-    
-    
-    
-    <!-----Latest Products--------->
-    
-    <h2 class="title">Latest Products</h2>
-    <div class="row">
-    <div class="col-4">
-    <img src="img/brown.jpeg">
+    <p>$80.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Blue flower Tops', 80.00)">Add to Cart</button>
+  </div>
+  <!-- Add more featured products here -->
+</div>
+</div>
+
+<!-- Latest Products -->
+<div class="small-container">
+<h2 class="title">Latest Products</h2>
+<div class="row" id="latest-products">
+  <!-- Product 5 -->
+  <div class="col-4">
+    <img src="img/brown.jpeg" alt="Brown Tops">
     <h4>Brown Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
     </div>
-    <p>50.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/batch 2.jpg">
+    <p>$50.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Brown Tops', 50.00)">Add to Cart</button>
+  </div>
+  <!-- Product 6 -->
+  <div class="col-4">
+    <img src="img/batch 2.jpg" alt="White hart Tops">
     <h4>White hart Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-half-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
     </div>
-    <p>60.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/batch 3.jpg">
+    <p>$60.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('White hart Tops', 60.00)">Add to Cart</button>
+  </div>
+  <!-- Product 7 -->
+  <div class="col-4">
+    <img src="img/batch 3.jpg" alt="Ray Colt Tops">
     <h4>Ray Colt Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
     </div>
-    <p>90.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    
-    <div class="col-4">
-    <img src="img/green.jpg">
+    <p>$90.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Ray Colt Tops', 90.00)">Add to Cart</button>
+  </div>
+  <!-- Product 8 -->
+  <div class="col-4">
+    <img src="img/green.jpg" alt="Mint Green Tops">
     <h4>Mint Green Tops</h4>
     <div class="rating">
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star"> </I>
-    <i class="fa fa-star-half-o"> </I>
-    
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
     </div>
-    <p>95.00</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-    </div>
-    </div>
+    <p>$95.00</p>
+    <button class="add-to-cart-btn" onclick="addToCart('Mint Green Tops', 95.00)">Add to Cart</button>
+  </div>
+  <!-- Add more latest products here -->
+</div>
+</div>
 
-      
+<!-- JavaScript to handle adding to cart and buying -->
+<script>
+let cartItems = [];
+
+function addToCart(productName, price) {
+  cartItems.push({ name: productName, price: price });
+  updateCartSummary();
+  alert(productName + " has been added to your cart!");
+}
+
+function updateCartSummary() {
+  let total = 0;
+  for (let item of cartItems) {
+    total += item.price;
+  }
+  document.getElementById("total").innerText = total.toFixed(2);
+}
+
+function buy() {
+  let options = document.getElementById("payment-options");
+  if (cartItems.length > 0) {
+    options.style.display = "block";
+  } else {
+    alert("Your cart is empty. Please add items before buying.");
+  }
+}
+
+function pay(method) {
+  alert("Thank you for your purchase using " + method + "!");
+  cartItems = []; // Clear the cart after purchase
+  updateCartSummary();
+}
+</script>
+
+</body>
+</html>
+
