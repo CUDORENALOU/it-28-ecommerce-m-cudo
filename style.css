@@ -250,19 +250,39 @@
     padding: 50px 0;
 }
 
-.about-us .container {
-    text-align: center;
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.about-us h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+.about-image img {
+    max-width: 800%; /* Adjust according to your design */
+    height: auto;
+    max-height: 500px; /* Adjust height as needed */
+    margin-right: 30px; /* Adjust margin as needed */
 }
 
-.about-us p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.about-text {
+    flex: 1;
+    font-size: 0.9em; /* Adjust font size as needed */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 800%; /* Adjust according to your design */
+    height: auto;
+    max-height: 500px; /* Adjust height as needed */
+    margin-right: 30px; /* Adjust margin as needed */
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.3em; /* Adjust font size as needed */
 }
