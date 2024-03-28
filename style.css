@@ -286,3 +286,8 @@
     flex: 1;
     font-size: 1.3em; /* Adjust font size as needed */
 }
+.about-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
