@@ -1,3 +1,6 @@
+Sure, I'll include JavaScript functions to hide labels for the "Last name", "Credit card number", "CVV", and "Date" fields as well:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,53 +10,80 @@
     <link rel="stylesheet" href="payment.css">
 </head>
 <body>
-    <body>
-        <div class="container">
+    <div class="container">
   
-            <h1>Payment form</h1>
-            
-            <span class="fieldRow">
-              <input id="name" type="name" placeholder="" />
-              <label for="name">First name</label>
-              <i for="name" class="fa fa-user"></i>
-            </span>
-            
-            <span class="fieldRow">
-              <input id="surname" type="name" placeholder="" />
-              <label for="surname">Last name</label>
-              <i for="surname" class="fa fa-user"></i>
-            </span>
-            
-            <div class="blank_space">
-              <span class="fieldRow credit_card">
-                <input id="cc" class="credit_card_number" type="text" placeholder="" />
-                <label for="cc">Credit card number</label>
-                <i for="cc" class="fa fa-credit-card"></i>
-                <div class="zoomBtn">ZOOM</div>
-                <div class="closeBtn"><i class="fa fa-times"></i></div>
-              </span> 
-            </div>
+        <h1>Payment form</h1>
+        
+        <span class="fieldRow">
+          <input id="name" type="text" placeholder="" />
+          <label for="name" id="first-name-label">First name</label>
+          <i for="name" class="fa fa-user"></i>
+        </span>
+        
+        <span class="fieldRow">
+          <input id="surname" type="text" placeholder="" />
+          <label for="surname" id="last-name-label">Last name</label>
+          <i for="surname" class="fa fa-user"></i>
+        </span>
+        
+        <div class="blank_space">
+          <span class="fieldRow credit_card">
+            <input id="cc" class="credit_card_number" type="text" placeholder="" />
+            <label for="cc" id="credit-card-label">Credit card number</label>
+            <i for="cc" class="fa fa-credit-card"></i>
+            <div class="zoomBtn">ZOOM</div>
+            <div class="closeBtn"><i class="fa fa-times"></i></div>
+          </span> 
+        </div>
+      
+        <span class="fieldRow col2">
+          <input id="cvv" type="text" placeholder="XXX" />
+          <label for="cvv" id="cvv-label">CVV</label>
+          <i for="cvv" class="fa fa-lock"></i> 
+         </span>
+       
+         <span class="fieldRow col2 last">
+          <input id="date" type="text" placeholder="mm/yy" />
+          <label for="date" id="date-label">Date</label>
+          <i for="date" class="fa  fa-calendar"></i>
+         </span>
+        
+         <a href="logistic.html" id="pay-now">PAY NOW</a>
+      
+      </div>
+      
+      <div class="overlay"></div>
           
-            <span class="fieldRow col2">
-              <input id="cvv" type="text" placeholder="XXX" />
-              <label for="cvv">CVV</label>
-              <i for="cvv" class="fa fa-lock"></i> 
-             </span>
-           
-             <span class="fieldRow col2 last">
-              <input id="date" type="text" placeholder="mm/yy" />
-              <label for="date">Date</label>
-              <i for="date" class="fa  fa-calendar"></i>
-             </span>
-            
-             <a href="logistic.html" id="pay-now">PAY NOW</a>
-          
-          </div>
-          
-          <div class="overlay"></div>
-          
-          
-      </body>
-</body>
 <script src="payment.js"></script>
+<script>
+    document.getElementById('name').addEventListener('input', function() {
+        var label = document.getElementById('first-name-label');
+        label.style.display = 'none';
+    });
+
+    document.getElementById('surname').addEventListener('input', function() {
+        var label = document.getElementById('last-name-label');
+        label.style.display = 'none';
+    });
+
+    document.getElementById('cc').addEventListener('input', function() {
+        var label = document.getElementById('credit-card-label');
+        label.style.display = 'none';
+    });
+
+    document.getElementById('cvv').addEventListener('input', function() {
+        var label = document.getElementById('cvv-label');
+        label.style.display = 'none';
+    });
+
+    document.getElementById('date').addEventListener('input', function() {
+        var label = document.getElementById('date-label');
+        label.style.display = 'none';
+    });
+</script>
+
+</body>
 </html>
+```
+
+This code will hide the labels associated with each input field as the user starts typing in the respective fields.
